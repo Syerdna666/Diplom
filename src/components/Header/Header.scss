@@ -1,0 +1,157 @@
+@import "../../Styles/variables.scss";
+
+.header {
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 6;
+    opacity: 1;
+    padding: 10px 20px;
+
+    @include breakpoint(md) {
+        padding: 0 3em;
+    }
+
+    transition: 0.3s ease all;
+
+    a {
+        display: inline-block;
+        position: relative;
+        transition: all 0.3s;
+        color: white;
+        font-size: 1.5rem;
+        margin: 5px 25px;
+    }
+
+    a:hover {
+        opacity: 0.6;
+    }
+
+    a:not(.nounderline):after {
+        display: block;
+        content: "";
+        background-color: white;
+        height: 0.05em;
+        width: 0%;
+        left: 50%;
+        position: absolute;
+        transition: width .3s ease-in-out;
+        transform: translateX(-50%);
+    }
+
+    a:hover:after,
+    a:focus:after {
+        width: 100%;
+    }
+}
+
+.header__content {
+    overflow: hidden;
+    max-width: 1920px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar {
+    top: 0;
+    right: 100%;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translate(0);
+    transition: 0.3s ease transform;
+
+    @include breakpoint(md) {
+        transform: none;
+        flex-direction: row;
+        background: transparent;
+        width: auto;
+        height: 100%;
+        position: static;
+    }
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(md) {
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 0;
+        margin-right: calc(0.5rem + 2px);
+    }
+
+    li {
+        a {
+            text-decoration: none;
+            color: inherit;
+            padding: 0.75rem 1.25rem;
+            border-radius: 2px;
+            transition: 0.3s ease all;
+        }
+
+    }
+
+}
+
+// .navbar.menuOpen {
+
+// }
+
+
+.navbar__item {
+    display: inline-block;
+    margin: 15px;
+}
+
+.sticky-nav {
+    color: black;
+    box-shadow: 0px 11px 18px 2px rgba(49, 75, 96, 0.43);
+    background: white;
+    top: 0;
+    left: 0;
+
+    a {
+        color: black;
+        transition: all 0.3s;
+    }
+
+    a:not(.nounderline):after {
+        background-color: black;
+    }
+
+}
+
+.navbar__logo {
+    width: 40px;
+    height: 40px;
+}
+
+.hamburger__icon {
+    margin: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    transition: 0.3s ease all;
+    position: relative;
+
+    &:hover {
+        color: aqua
+    }
+
+    @include breakpoint(md) {
+        display: none;
+    }
+}

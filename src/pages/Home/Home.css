@@ -1,0 +1,46 @@
+.home_bottom_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home_bottom_text {
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    letter-spacing: normal;
+    text-transform: none;
+    line-height: normal;
+}
+.home_bottom_links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.61em;
+    margin-top: 0.5em;
+    align-self: center;
+    margin-bottom: 0em;
+}
+.home_bottom_link {
+    display: block;
+    margin-right: .6em;
+    margin-left: .6em;
+}
+
+a :hover {
+    color:blueviolet;
+}
+a :visited {
+    color:black;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 5vw;
+    justify-content: center;
+    align-items: center;
+}
+
